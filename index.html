@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunFest Planners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="card">
+        <h1>FunFest Planners</h1>
+        <h3>Riddhi Gala</h3>
+
+        <div class="section">
+            <h2>Contact:</h2>
+            <div class="button-grid">
+                <a href="tel:+91 8779613166" class="button"><i>📞</i> Call</a>
+                <a href="https://wa.me/+918779613166" class="button"><i>💬</i> WhatsApp</a>
+                <a href="mailto:funfestplanners@gmail.com" class="button"><i>✉️</i> Email</a>
+                <a href="https://g.co/kgs/oFneC8g" class="button"><i>⭐</i> Review</a>
+                <button class="button" id="share-button"><i>🔗</i> Share Me</button>
+            </div>
+        </div>
+
+        <div class="share-dialog" id="share-dialog">
+            <button class="close-dialog" id="close-dialog">&times;</button>
+            <h3>Share</h3>
+            <div class="share-options">
+                <div class="share-option" onclick="shareOnFacebook()"><i>📘</i> <p>Facebook</p></div>
+                <div class="share-option" onclick="shareOnWhatsApp()"><i>💬</i><p>WhatsApp</p></div>
+                <div class="share-option" onclick="shareOnEmail()"><i>✉️</i><p>Email</p></div>
+            </div>
+            <div class="share-link" onclick="copyToClipboard()">
+                <p>Click to copy link</p>
+                <p id="link-text">https://g.co/kgs/QtuFPgW</p>
+            </div>
+        </div>
+
+        <script>
+            const shareButton = document.getElementById('share-button');
+            const shareDialog = document.getElementById('share-dialog');
+            const closeDialog = document.getElementById('close-dialog');
+
+            shareButton.addEventListener('click', () => {
+                shareDialog.style.display = 'block';
+            });
+
+            closeDialog.addEventListener('click', () => {
+                shareDialog.style.display = 'none';
+            });
+
+            function shareOnFacebook() {
+                const link = document.getElementById('link-text').textContent;
+                const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
+                window.open(facebookUrl, '_blank');
+            }
+
+            function shareOnWhatsApp() {
+                const link = document.getElementById('link-text').textContent;
+                const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(link)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+
+            function shareOnEmail() {
+                const link = document.getElementById('link-text').textContent;
+                const emailUrl = `mailto:?subject=Check this out&body=${encodeURIComponent(link)}`;
+                window.open(emailUrl, '_blank');
+            }
+
+            function copyToClipboard() {
+                const link = document.getElementById('link-text').textContent;
+                navigator.clipboard.writeText(link)
+                    .then(() => {
+                        alert('Link copied to clipboard!');
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+            }
+        </script>
+
+        <div class="section">
+            <h2>Profile:</h2>
+            <div class="button-grid">
+                <a href="about.html" class="button"><i>ℹ️</i> About Us</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Company:</h2>
+            <div class="button-grid">
+                <a href="company.html" class="button"><i>🏢</i> Company</a>
+                <a href=" https://g.co/kgs/dCx68Bx" class="button"><i>🏞️</i> Images</a>
+
+                <a href="https://www.google.com/maps/place/Northern+Supremus,+Dahisar+East/@19.2483689,72.8593738,
+                17z/data=!3m1!4b1!4m6!3m5!1s0x3be7b193f1af94dd:0x99c62daf18a0a1b3!8m2!3d19.248369!4d72.8639872!16s%2Fg%2
+                F11swmz2jhx?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" class="button"><i>📍</i> Location</a>
+            </div>
+        </div>
+
+
+        <!-- <script>
+            const imagesButton = document.getElementById('images-button');
+            const imageModal = document.getElementById('image-modal');
+            const closeModal = document.getElementById('close-modal');
+
+            imagesButton.addEventListener('click', () => {
+                imageModal.style.display = 'block';
+            });
+
+            closeModal.addEventListener('click', () => {
+                imageModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === imageModal) {
+                    imageModal.style.display = 'none';
+                }
+            });
+        </script> -->
+
+        <div class="section">
+            <h2>Follow Us:</h2>
+            <div class="button-grid">
+                <a href="https://www.instagram.com/funfestplanners?igsh=NGZlZm16OHY4aHF5" class="button"><i>📸</i> Instagram</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <b> &copy; 2025 FunFest Planners. All rights reserved.</b>
+        </div>
+    </div>
+</body>
+</html>
