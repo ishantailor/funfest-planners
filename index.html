@@ -80,18 +80,78 @@
                     });
             }
         </script>
-
-        <div class="section">
-            <h2>Profile:</h2>
-            <div class="button-grid">
-                <a href="about.html" class="button"><i>ℹ️</i> About Us</a>
-            </div>
+<div class="section">
+    <h2>Profile:</h2>
+    <div class="button-grid">
+      <a href="#" class="button" onclick="openModal()"><i>ℹ️</i> About Us</a>
+    </div>
+  </div>
+  
+  <!-- Modal Structure -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2>About Us</h2>
+      <div class="for">
+      <p>FunFest Planners has successfully organized various memorable events, bringing creativity and perfection together. Here are some of our past events:</p>
+    </div>
+       <div class="events-grid">
+        <div class="event-item">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipMJq92u_PInnEx4fOIZHGSKpTut91IOpYl24yOt=w141-h235-n-k-no-nu" alt="Wedding Event">
+          <h4>Grand Wedding</h4>
+          <p>Elegant Decor</p>
         </div>
+        <div class="event-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipP-WFCOSK4RiSTowy4WFAWtoyOo8dmoJgMoLTjI=s680-w680-h510" alt="Corporate Event">
+          <h4>baby Shower</h4>
+          <p>Decorative</p>
+        </div>
+        <div class="event-item">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipMk8A6k1Y3isyf56MiftnmU_WYqYRAE0S5OCFVl=w141-h118-n-k-no-nu" alt="Birthday Party">
+          <h4>Birthday Bash</h4>
+          <p>Fun & Artistic</p>
+        </div>
+        <div class="event-item">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNThjxgtIu_Qcd-RjGaZcq4hhPOtjRNKSz3OOnn=s680-w680-h510" alt="Festival Celebration">
+          <h4>Anniversaries</h4>
+          <p>Romantic Vibes</p>
+        </div>
+        <div class="event-item">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNxxt5-TCRmYqW-YMZUdJqdRhmYcY95lsnodJIN=s680-w680-h510" alt="Festival Celebration">
+            <h4>Birthday party</h4>
+            <p>Fun & Games</p>
+          </div>
+          <div class="event-item">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipOZ_phryvGkwl4AThrdPlAbwMERXs2K7JryOJOi=w141-h176-n-k-no-nu" alt="Festival Celebration">
+            <h4>All type of Events</h4>
+            <p>Casual,Party & Fun</p>
+          </div>
+      </div>
+    </div>
+  </div>
 
+        <script>// Function to open the modal
+            function openModal() {
+              document.getElementById("aboutModal").style.display = "block";
+            }
+            
+            // Function to close the modal
+            function closeModal() {
+              document.getElementById("aboutModal").style.display = "none";
+            }
+            
+            // Close the modal when clicking outside of it
+            window.onclick = function (event) {
+              var modal = document.getElementById("aboutModal");
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+            </script>  
         <div class="section">
             <h2>Company:</h2>
             <div class="button-grid">
-                <a href="company.html" class="button"><i>🏢</i> Company</a>
+                <a href="https://drive.google.com/file/d/1kybiUhcEKacjmMIQrOcCVkyoGFZs9T6w/view?usp=drive_link" class="button"><i>🏢</i> Company</a>
                 <a href=" https://g.co/kgs/dCx68Bx" class="button"><i>🏞️</i> Images</a>
 
                 <a href="https://www.google.com/maps/place/Northern+Supremus,+Dahisar+East/@19.2483689,72.8593738,
